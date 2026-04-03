@@ -1,0 +1,15 @@
+Well, in the all images, we can't confirm that they are in html because it's mostly done in ASP.NET and C#, but assuming it's in html code, it can be created using initially header inside it h1 and css style="text-align: center; . 
+in the body we can use more than one like :we can use a table inside it we have three <th> first one we use h1 "Our Story" and the second one we but the picture and the third one we use h1 "Our Vision" and under it <h3> and under it <p> then we have a button with css to change the colors and i think when you put the mouse on the button, the color will change because everyone is using this now and thats why there is a java script code like this "onmouseover","onmouseout" but the basic css code
+.btn{
+background-color:Black;
+color:white;
+padding:10px 20px;
+border:none;
+cursor:pointer;
+}
+.btn:hover {
+background-color:
+<button class="btn" onclick="">Learn more</button>
+and at the end of the page they used "footer"
+in the second image nothin new expect "span"
+the third and fourth images like the others but in a different order

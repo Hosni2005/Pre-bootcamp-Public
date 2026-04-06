@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 8px 0;
+}
+h1 {
+    color: #00ffff;
+    background-color: black;
+    padding-left: 10px;
+    font-size: 40px;
+    font-family: cursive;
+}
+span {
+    color: white;
+}
+h3 {
+    text-align: center;
+    background-color:#663399 ;
+    color: white;
+    margin: 6px 0;
+    font-size: 30px;
+    font-style: italic;
+
+}
+p {
+    background-color: #9fc5f8;
+    text-align: right;
+    text-decoration: underline;
+    color: #312963;
+    font-weight: bold;
+    padding-right: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+}

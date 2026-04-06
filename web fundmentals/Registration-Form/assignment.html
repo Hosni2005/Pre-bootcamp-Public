@@ -8,11 +8,12 @@
     
     </head>
     <body>
+      <form action="#" method="post">
       <header>
         <h1 style="text-align: center;">Registration Form :</h1>
       </header>
-    <label><strong>First name :</strong></label>
-      <input type="text" placeholder="First name">
+    <label for="name"><strong>First name :</strong></label>
+      <input type="text" placeholder="First name" id="name" required>
        <br>
     <label><strong>Last name :</strong></label>
       <input type="text" placeholder="Last name">
@@ -45,18 +46,19 @@
         <br>
     <label>favorite Language :</label>
       <select name="favorite Language" id="">
-        <option>JavaScript</option>
-        <option>CSS</option>
+        <option value="#">JavaScript</option>
+        <option value="#">CSS</option>
         <option>HTML</option>
         <option>Paython</option>
       </select>
         <br>
-      <input type="checkbox">
+      <input type="checkbox" >
     <label>Yes, I would like to receive periodic email updates</label>
          <br>  
     <input type="submit" value="Create Account">
        <ul>
         <li>Indicates a required field</li>
        </ul>
+       </form>
     </body>
 </html>

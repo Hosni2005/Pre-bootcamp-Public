@@ -1,0 +1,46 @@
+/* * {
+    margin: 5px 5px 5px 5px;
+    padding: 10px;
+} */
+#search {
+    border-color: #4bb3b4;
+    border-radius: 35px;
+    text-align: center;
+    border-width: 0.15rem;
+    display: block;
+    margin: 50px 20px 15px 40px;
+    padding: 8px;
+}
+input::placeholder {
+    color: #4bb3b4;
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px 0px;
+    border-style: hidden;
+    background-color: #00d1b2;
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    margin: 15px 20px 15px 40px;
+}
+#submit {
+    margin: 0px 20px 15px 40px;
+    width: 30%;
+    height: 35px;
+    color: white;
+    background-color: #2b78e4;
+    box-shadow:black 2px 2px;
+    display: block;
+}
+.search-btn {
+    margin: 0px 20px 15px 40px;
+    padding: 8px 4.5rem;
+    border-radius: 50px;
+    border-color: #4bb3b4;
+    color: #4bb3b4;
+    font-weight: bold;
+}

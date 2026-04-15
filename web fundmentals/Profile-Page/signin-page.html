@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sginin-style.css">
+    <title>Instagram Login</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="phone-side">
+            <img src="photos/insta-icon.jpg" alt="Instagram photo" class="down">
+            <img src="photos/Hosni-logo.png" class="top">
+        </div>
+
+        <div class="login-side">
+            <div class="login-box">
+                <h1 class="logo">Hosnigram</h1>
+                <form action="Profile-page.html" class="login-form" onsubmit="return validateLogin()">
+                    <input type="text" placeholder="username, or email" class="text" id="username">
+                    <input type="password" placeholder="Password" class="text" id="password">
+                    <input type="submit" name="submit" id="login-btn" value="Log in">
+                </form>
+                <div class="or">
+                    <span>OR</span>
+                </div>
+                <div class="">
+                <a href="Profile-page.html" class="gmail-login"><img src="photos/gmail.png" alt=""> Log in with gmail</a><br>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+            </div>
+
+            <div class="signup-box">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1f4f78;
+}
+
+.page {
+    width: 970px;
+    margin: 0 auto;
+    background: #1f4f78;
+    color: white;
+}
+
+.top-header {
+    width: 970px;
+    padding: 30px 25px 10px 25px;
+    overflow: hidden;
+}
+
+.logo-area {
+    float: left;
+    width: 430px;
+}
+
+.logo-area img {
+    width: 360px;
+    display: block;
+}
+
+.right-tools {
+    float: right;
+    width: 330px;
+    text-align: right;
+}
+
+.text-size {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.text-size a {
+    color: #f0c433;
+    text-decoration: none;
+    margin-left: 6px;
+}
+
+.search-box {
+    width: 330px;
+    background: #4b4b4b;
+    border-radius: 12px;
+    padding: 18px 18px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.search-box input {
+    width: 220px;
+    height: 44px;
+    border: 2px solid #cfcfcf;
+    outline: none;
+    padding: 0 12px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.search-box button {
+    width: 58px;
+    height: 44px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #1f5d8f;
+    color: white;
+    font-size: 18px;
+    vertical-align: middle;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.nav {
+    width: 920px;
+    margin: 10px auto 25px auto;
+    background-color: #2e78b9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin: 0 18px;
+    line-height: 95px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.hero {
+    width: 900px;
+    margin: 0 auto 25px auto;
+    overflow: hidden;
+}
+
+.left-links {
+    float: left;
+    width: 280px;
+    padding-top: 10px;
+}
+
+.left-links ul {
+    list-style: none;
+}
+
+.left-links li {
+    margin: 14px 0;
+    color: #f0c433;
+    font-size: 18px;
+}
+
+.left-links a {
+    color: white;
+    font-size: 24px;
+    text-decoration: underline;
+    margin-left: 8px;
+}
+
+.left-links .sub {
+    margin-left: 38px;
+    font-size: 16px;
+}
+
+.left-links .sub a {
+    font-size: 20px;
+}
+
+.main-text {
+    float: right;
+    width: 580px;
+    text-align: center;
+}
+
+.main-text .intro {
+    font-size: 21px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.zen {
+    color: #f0c433;
+    font-style: italic;
+    font-size: 31px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.zen-title {
+    margin-top: 18px;
+    font-size: 24px;
+    color: white;
+}
+
+.lower-section {
+    width: 970px;
+    background: #efefef;
+    padding: 20px 0 25px 0;
+    overflow: hidden;
+    color: black;
+}
+
+.info-box {
+    float: left;
+    width: 420px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.info-box.last {
+    margin-left: 50px;
+}
+
+.blue-line {
+    width: 100%;
+    height: 5px;
+    background: #73a5d6;
+    margin-bottom: 12px;
+}
+
+.info-box h2 {
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.info-box p {
+    font-size: 21px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.info-box ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.info-box li {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.info-box a {
+    color: #74a6da;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer {
+    width: 970px;
+    background: #2a6699;
+    text-align: center;
+    padding: 45px 20px 15px 20px;
+}
+
+.footer-links a {
+    color: #8eb8de;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 28px;
+}
+
+.copyright {
+    margin-top: 25px;
+    color: #a8c4dd;
+    font-size: 14px;
+}

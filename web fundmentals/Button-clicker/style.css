@@ -1,0 +1,96 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+body {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+main {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #cccccc;
+    width: 97%;
+}
+header input[type="search"] {
+    padding: 10px;
+    width: 20rem;
+    border: 2px solid black;
+}
+header input[type="submit"] {
+    background-color: #2c77e4;
+    color: white;
+    padding: 8px 15px;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 30%;
+    gap: 15px;
+}
+section {
+    display: flex;
+    border: 1px solid black;
+    gap: 20px;
+    height: 30%;
+    align-items: center;
+    
+}
+.chaker {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+    width: 30%;
+}
+.chaker h3 {
+    font-size: 40px;
+}
+.chaker p {
+    font-size: 17px;
+}
+.chaker button {
+    background-color: #fcdb63;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    padding: 12px 20px;
+}
+.aws {
+    font-size: 20px;
+    margin-left: 30px;
+    text-align: center;
+    width: 70%;
+}
+aside {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width : 40%;
+    height: 15rem;
+    border: 1px solid black;
+    font-size: 25px;
+}
+aside button {
+    background-color: #92c47d;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    padding: 12px 40px;
+}

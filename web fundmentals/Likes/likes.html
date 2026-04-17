@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h2>Network</h2>
+        </header>
+
+        <nav>
+            <h1>Your Feed</h1>
+        </nav>
+
+        <div class="container">
+            <aside>
+                <img src="user-circle.png" alt="user image">
+                <a href="#">Add an avatar</a>
+                <h3>James Doe</h3>
+            </aside>
+
+            <div class="col">
+                <section>
+                    <div class="post">
+                        <p>Neil M</p>
+                        <div class="like-area">
+                            <span>9 like(s)</span>
+                            <button onclick="addLike(this)">Like</button>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>
+                            I just set up this new discord bot, let me know what you all think.
+                            <a href="#">link</a>
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="post">
+                        <p>Nichole K</p>
+                        <div class="like-area">
+                            <span>12 like(s)</span>
+                            <button onclick="addLike(this)">Like</button>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Just finished my <a href="#">next comic</a>, check it out.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="post">
+                        <p>Jim R</p>
+                        <div class="like-area">
+                            <span>9 like(s)</span>
+                            <button onclick="addLike(this)">Like</button>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>
+                            I can't stop listening to the <a href="#">new album</a>. Who else is liking it?
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

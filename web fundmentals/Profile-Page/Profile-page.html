@@ -29,14 +29,17 @@
 
             <div class="card user-card">
                 <div class="card-header">
-                    <img src="photos/Hosni-image.jpeg" alt="jane" class="avatar-m">
+                    <img src="photos/Hosni-image.jpeg" alt="Hosni" class="avatar-m">
                 </div>
                 <div class="card-body">
-                    <h1>Hosni Ahmad</h1>
+                    <h1 class="profile-name">Hosni Ahmad</h1>
+                    <input type="text" class="inputclass" style="display: none;">
+                    <button class="ok-btn" onclick="ok()" style="display: none;">OK</button>
                     <h3><img src="photos/map-marker.png" alt="pin" class="icon-s"> Ramallah</h3>
                     <p>Developer | Engineer | Problem Solver<br>
                         Master of shadows and the Internet!</p>
-                    <p><a href="#"><img src="photos/gear.png" alt="gear" class="icon-s"> edit profile</a></p>
+                    <img src="photos/gear.png" alt="gear" class="icon-s">
+                    <a href="#" onclick="edit(); return false;" class="editprofile">edit profile</a>
                 </div>
             </div>
 
@@ -57,35 +60,36 @@
 
             <div class="card">
                 <div class="card-header">
-                    <span class="badge">2</span>
+                    <span class="badge req2">2</span>
                     <h3>Connection Requests</h3>
                 </div>
                 <ul class="card-list">
-                    <li class="card-list-item">
+                    <li class="card-list-item linereq">
                         <span>
                             <img src="photos/user-circle.png" alt="todd" class="avatar-s">
                             Todd E
                         </span>
                         <span>
-                            <img src="photos/accept-circle.png" alt="accept" class="icon">
-                            <img src="photos/close-circle.png" alt="close" class="icon">
+                            <img src="photos/accept-circle.png" alt="accept" class="icon" onclick="accept(this)">
+                            <img src="photos/close-circle.png" alt="close" class="icon" onclick="False(this)">
                         </span>
                     </li>
-                    <li class="card-list-item">
+                    <li class="card-list-item linereq">
                         <span>
                             <img src="photos/user-circle.png" alt="phil" class="avatar-s">
                             Phil E
                         </span>
                         <span>
-                            <img src="photos/accept-circle.png" alt="accept" class="icon">
-                            <img src="photos/close-circle.png" alt="close" class="icon">
+                            <img src="photos/accept-circle.png" alt="accept" class="icon" onclick="accept(this)">
+                            <img src="photos/close-circle.png" alt="close" class="icon" onclick="False(this)">
                         </span>
                     </li>
                 </ul>
             </div>
+
             <div class="card">
                 <div class="card-header">
-                    <span class="badge">500+</span>
+                    <span class="badge con500">500</span>
                     <h3>Your Connections</h3>
                 </div>
                 <ul class="card-list">

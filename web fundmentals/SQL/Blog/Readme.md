@@ -79,6 +79,7 @@ Stores login credentials for users.
 
 ## Screenshot
 Database schema designed successfully in MySQL Workbench.
+![Schema Screenshot](Screenshot%202026-04-24%20145538.png)
 
 ---
 

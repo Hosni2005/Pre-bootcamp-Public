@@ -1,87 +1,286 @@
-# Python Function Output Practice
+# 🧠 Python Functions – Output Prediction
 
-This assignment practices predicting Python function outputs and understanding how `return`, `print`, variables, and function calls work.
+This project focuses on understanding how Python functions behave by predicting their outputs. It covers key concepts such as `return`, `print`, variable scope, and function calls.
 
-## Overview
+---
 
-The file contains 15 small Python examples. Each example asks you to predict the output before running the code.
+## 📖 Overview
 
-## Concepts Covered
+The exercises are designed to help you:
 
-- Functions
-- `print()` statements
-- `return` statements
-- Code after `return`
-- Function parameters
-- String concatenation
-- Variable scope
-- Calling functions inside other functions
-- Storing return values in variables
+* Understand the difference between `print()` and `return`
+* Learn how function execution works
+* Predict outputs before running code
+* Understand variable scope (local vs global)
+* Analyze function calls and execution flow
 
-## Examples Included
+---
 
-### Return Values
-Some functions return values directly:
+## 📂 Project Structure
+
+```
+functions_output_practice.py
+README.md
+```
+
+---
+
+## ⚙️ Exercises Included
+
+### 1. Basic Return
 
 ```python
 def a():
     return 5
 
 print(a())
-Output:
+```
 
-5
-Print vs Return
+---
 
-A function that only prints something returns None automatically:
+### 2. Function Call Addition
 
+```python
+def a():
+    return 5
+
+print(a() + a())
+```
+
+---
+
+### 3. Code After Return (Ignored)
+
+```python
+def a():
+    return 5
+    return 10
+
+print(a())
+```
+
+---
+
+### 4. Print After Return (Ignored)
+
+```python
+def a():
+    return 5
+    print(10)
+
+print(a())
+```
+
+---
+
+### 5. Print vs Return
+
+```python
 def a():
     print(5)
 
 x = a()
 print(x)
+```
 
-Output:
+---
 
-5
-None
-Code After Return
+### 6. Function Without Return (Error Case)
 
-Any code written after return will not run:
+```python
+def a(b, c):
+    print(b + c)
 
+print(a(1, 2) + a(2, 3))
+```
+
+---
+
+### 7. String Concatenation
+
+```python
+def a(b, c):
+    return str(b) + str(c)
+
+print(a(2, 5))
+```
+
+---
+
+### 8. Conditional Return
+
+```python
 def a():
-    return 5
+    b = 100
+    print(b)
+    if b < 10:
+        return 5
+    else:
+        return 10
+
+print(a())
+```
+
+---
+
+### 9. Multiple Returns
+
+```python
+def a(b, c):
+    if b < c:
+        return 7
+    else:
+        return 14
+
+print(a(2, 3))
+print(a(5, 3))
+print(a(2, 3) + a(5, 3))
+```
+
+---
+
+### 10. Return Stops Execution
+
+```python
+def a(b, c):
+    return b + c
     return 10
 
-The function returns 5, and return 10 is ignored.
+print(a(3, 5))
+```
 
-Variable Scope
+---
 
-A variable inside a function is local and does not change the outside variable unless returned and reassigned:
+### 11. Global vs Local Variable
 
+```python
 b = 500
+print(b)
 
 def a():
     b = 300
-    return b
+    print(b)
 
-b = a()
+print(b)
+a()
+print(b)
+```
+
+---
+
+### 12. Return Without Reassignment
+
+```python
+b = 500
 print(b)
 
-Output:
+def a():
+    b = 300
+    print(b)
+    return b
 
-300
-Important Notes
-print() displays a value but does not return it.
-return sends a value back from the function.
-A function without return returns None.
-Code after return does not execute.
-Local variables inside functions do not affect global variables unless reassigned.
-How to Run
-Save the code in a file, for example:
-functions_basic_2.py
-Run it using:
-python functions_basic_2.py
-Author
+print(b)
+a()
+print(b)
+```
 
-Hosni Ahmad
+---
+
+### 13. Return With Reassignment
+
+```python
+b = 500
+print(b)
+
+def a():
+    b = 300
+    print(b)
+    return b
+
+print(b)
+b = a()
+print(b)
+```
+
+---
+
+### 14. Function Inside Function
+
+```python
+def a():
+    print(1)
+    b()
+    print(2)
+
+def b():
+    print(3)
+
+a()
+```
+
+---
+
+### 15. Nested Function with Return
+
+```python
+def a():
+    print(1)
+    x = b()
+    print(x)
+    return 10
+
+def b():
+    print(3)
+    return 5
+
+y = a()
+print(y)
+```
+
+---
+
+## 🎯 Concepts Covered
+
+* `print()` vs `return`
+* Function execution order
+* Code after `return`
+* Function parameters
+* String conversion using `str()`
+* Local vs global variables
+* Function calls inside functions
+* Storing return values
+
+---
+
+## 🚀 How to Run
+
+1. Save the code in a file:
+
+```
+functions_output_practice.py
+```
+
+2. Run the file:
+
+```bash
+python functions_output_practice.py
+```
+
+---
+
+## 📌 Notes
+
+* `print()` displays output but returns `None`
+* `return` sends a value back from the function
+* Any code after `return` does not execute
+* Local variables do not affect global variables unless reassigned
+* Always predict the output before running the code
+
+---
+
+## 📌 Author
+
+**Hosni Ahmad**
+Aspiring Full-Stack Developer
+
+---

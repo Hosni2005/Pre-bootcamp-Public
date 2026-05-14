@@ -113,19 +113,19 @@ The row and column positions decide which color each square should use.
 
 ### Default Checkerboard
 
-![Default Checkerboard](capture-1.png)
+![Default Checkerboard](screenshots/capture-1.png)
 
 ### 5x5 Checkerboard
 
-![5x5 Checkerboard](capture-2.png)
+![5x5 Checkerboard](screenshots/capture-2.png)
 
 ### Custom Red and Black Checkerboard
 
-![Red and Black Checkerboard](capture-3.png)
+![Red and Black Checkerboard](screenshots/capture-3.png)
 
 ### Custom Red and White Checkerboard
 
-![Red and White Checkerboard](capture-4.png)
+![Red and White Checkerboard](screenshots/capture-4.png)
 
 ## Author
 

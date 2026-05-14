@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}

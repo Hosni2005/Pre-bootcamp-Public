@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Checkerboard</title>
+
+    <style>
+        .white {
+            background-color: {{ color1 }};
+        }
+
+        .black {
+            background-color: {{ color2 }};
+        }
+
+        main {
+            width: calc(100px * {{ x }});
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        {% for i in range(x * y) %}
+
+            {% set row = (i // x) % 2 %}
+            {% set col = (i % x) % 2 %}
+
+            {% if row == col %}
+                <div class="card white"></div>
+            {% else %}
+                <div class="card black"></div>
+            {% endif %}
+
+        {% endfor %}
+    </main>
+
+</body>
+
+</html>

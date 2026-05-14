@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='user-data.css') }}">
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h3>Submitted Info</h3>
+        <!-- received the data from the form and display it back to the user. -->
+        <!-- You can use the {{ variable_name }} syntax to access the data passed from the server. -->
+        <div class="info">
+            <p><span>Name:</span> {{ name }}</p>
+            <p><span>Dojo Location:</span> {{ location }}</p>
+            <p><span>Favorite Language:</span> {{ language }}</p>
+            <p><span>Comment:</span> {{ comment }}</p>
+        </div>
+
+        <a href="/">
+            <button>Go Back</button>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

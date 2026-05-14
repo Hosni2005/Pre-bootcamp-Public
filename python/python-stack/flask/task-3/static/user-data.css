@@ -1,0 +1,76 @@
+/* css for user data form and display page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.card {
+    width: 350px;
+    border: 3px solid black;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input,
+select {
+    width: 160px;
+    height: 30px;
+    border: 3px solid black;
+    padding-left: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    border: 3px solid black;
+    resize: none;
+    margin-top: -8px;
+}
+
+button {
+    align-self: flex-end;
+    padding: 5px 15px;
+    background-color: #67a9b7;
+    color: white;
+    border: 3px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 black;
+}
+
+h3 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin-bottom: 10px;
+}
+
+.info span {
+    font-weight: bold;
+    display: inline-block;
+    width: 150px;
+}

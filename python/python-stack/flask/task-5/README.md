@@ -101,7 +101,7 @@ The CSS file adds table styling, hover effects, shadows, and responsive layout.
 ---
 ## Screenshot
 
-![Screenshot](/static/screeshot.png)
+![html table](/static/screeshot.png)
 
 ## Learning Objectives
 

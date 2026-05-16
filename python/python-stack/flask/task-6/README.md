@@ -89,12 +89,12 @@ http://127.0.0.1:5000
 
 ### 🍎 Fruits Page
 
-![Fruits Page](/screenshots/fruits-page.png)
+![Fruits Page](screenshots/fruits-page.png)
 
 ---
 ### 🏠 Home Page
 
-![Home Page](/screenshots/add-data.png)
+![Home Page](screenshots/add-data.png)
 
 ---
 
@@ -102,13 +102,13 @@ http://127.0.0.1:5000
 
 ### 🧾 Checkout Result
 
-![Checkout](/screenshots/the-result.png)
+![Checkout](screenshots/the-result.png)
 
 ---
 
 ### 🔄 Refresh Warning
 
-![Refresh Warning](/screenshots/refresh.png)
+![Refresh Warning](screenshots/refresh.png)
 
 ---
 

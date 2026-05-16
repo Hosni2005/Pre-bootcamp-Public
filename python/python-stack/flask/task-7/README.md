@@ -75,11 +75,9 @@ http://localhost:5000
 
 ## Screenshots
 
-Add your screenshots inside a folder named `screenshots` and use:
+### Counter Page
 
-```md
-![Home Page](home.png)
-```
+![Counter Page](home.png)
 
 ## Example
 

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>counter</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Counter</h1>
 
-    <h2>You visited this page {{ visits }} times</h2>
-    <h2>Counter value: {{ counter }}</h2>
+        <h2>You visited this page {{ visits }} times</h2>
+        <h2>Counter value: {{ counter }}</h2>
 
         <div class="buttons">
             <a href="/add_two">
@@ -20,16 +22,17 @@
 
             <a href="/reset">
                 <button class="reset-btn">Reset Counter</button>
-    </a>
+            </a>
 
             <a href="/destroy_session">
                 <button class="destroy-btn">Destroy Session</button>
             </a>
         </div>
 
-    <form action="/increment" method="POST">
-        <input type="number" name="amount" placeholder="Enter amount" required>
-        <button type="submit">Increment</button>
-    </form>
+        <form action="/increment" method="POST">
+            <input type="number" name="amount" placeholder="Enter amount" required>
+            <button type="submit">Increment</button>
+        </form>
 </body>
+
 </html>

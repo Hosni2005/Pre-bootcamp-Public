@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
@@ -13,26 +13,26 @@ body{
     height: 100vh;
 }
 
-.container{
+.container {
     background-color: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 400px;
 }
 
-h1{
+h1 {
     margin-bottom: 20px;
     color: #333;
 }
 
-h2{
+h2 {
     margin: 15px 0;
     color: #555;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -40,7 +40,7 @@ h2{
     flex-wrap: wrap;
 }
 
-button{
+button {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
@@ -51,33 +51,33 @@ button{
     transition: 0.3s;
 }
 
-button:hover{
+button:hover {
     background-color: #0056b3;
 }
 
-.reset-btn{
+.reset-btn {
     background-color: #dc3545;
 }
 
-.reset-btn:hover{
+.reset-btn:hover {
     background-color: #a71d2a;
 }
 
-.destroy-btn{
+.destroy-btn {
     background-color: #6c757d;
 }
 
-.destroy-btn:hover{
+.destroy-btn:hover {
     background-color: #495057;
 }
 
-form{
+form {
     margin-top: 20px;
     display: flex;
     gap: 10px;
 }
 
-input{
+input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
@@ -85,6 +85,6 @@ input{
     outline: none;
 }
 
-input:focus{
+input:focus {
     border-color: #007bff;
 }

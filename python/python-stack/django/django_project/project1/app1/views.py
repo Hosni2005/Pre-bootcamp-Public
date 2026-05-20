@@ -27,5 +27,7 @@ def json_data(request):
         "title": "My first blog",
         "content": "Hello world!"
     }
-
     return JsonResponse(data)
+
+def start(request):
+    return render(request, "app1/index.html")

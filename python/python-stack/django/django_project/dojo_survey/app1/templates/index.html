@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>survey form</title>
+</head>
+
+<body>
+    <main>
+        <form action="{% url 'result' %}" method="post">
+            {% csrf_token %}
+            <label for="name">
+                Your Name : <input type="text" id="name" name="name" required>
+            </label>
+            <select name="location">
+                <option value="san Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Los Angeles">Los Angeles</option>
+            </select>
+            <select name="favourite-language">
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+            </select>
+            <label for="comment">
+                Comment (optional): <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            </label>
+            <input type="submit" value="Button">
+        </form>
+    </main>
+</body>
+
+</html>

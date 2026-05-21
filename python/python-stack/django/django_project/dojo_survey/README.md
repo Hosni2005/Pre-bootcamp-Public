@@ -55,15 +55,15 @@ project/
 
 ### Home Page
 
-```md
+
 ![Home Page](images/home-page.png)
-```
+
 
 ### Survey Result Page
 
-```md
+
 ![Result Page](images/result-page.png)
-```
+
 
 Create an `images` folder inside your repository and place your screenshots there.
 

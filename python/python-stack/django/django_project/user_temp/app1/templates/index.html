@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Users with Templates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['DM Serif Display', 'serif'],
+            mono: ['DM Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-stone-100 min-h-screen font-mono flex items-start justify-center pt-12 pb-16">
+
+  <div class="w-full max-w-2xl mx-4">
+
+    <!-- Users Table Section -->
+    <div class="bg-white border border-stone-300 rounded-sm shadow-sm mb-8">
+      <div class="border-b border-stone-200 px-6 pt-6 pb-4">
+        <h1 class="font-serif text-3xl text-stone-800 tracking-tight">All the Users</h1>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm" id="users-table">
+          <thead>
+            <tr class="border-b border-stone-300 bg-stone-50">
+              <th class="text-left px-6 py-3 text-xs font-500 uppercase tracking-widest text-stone-500 w-12">ID</th>
+              <th class="text-left px-4 py-3 text-xs font-500 uppercase tracking-widest text-stone-500">Name</th>
+              <th class="text-left px-4 py-3 text-xs font-500 uppercase tracking-widest text-stone-500">Email</th>
+              <th class="text-left px-4 py-3 text-xs font-500 uppercase tracking-widest text-stone-500 w-16">Age</th>
+            </tr>
+          </thead>
+          {% for i in users %}
+          <tbody id="user-rows">
+            <tr class="border-b border-stone-100 hover:bg-amber-50 transition-colors duration-100">
+              <td class="px-6 py-3 text-stone-400">{{ i.id }}</td>
+              <td class="px-4 py-3 text-stone-800 font-medium">{{ i.firstname }} {{ i.lastname }}</td>
+              <td class="px-4 py-3 text-stone-500">{{ i.email }}</td>
+              <td class="px-4 py-3 text-stone-600">{{ i.age }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Add User Section -->
+    <form method="POST" action="result">
+      {% csrf_token %}
+      <div class="bg-white border border-stone-300 rounded-sm shadow-sm">
+        <div class="border-b border-stone-200 px-6 pt-6 pb-4">
+          <h2 class="font-serif text-2xl text-stone-800 tracking-tight">Add a User</h2>
+        </div>
+
+        <div class="px-6 py-6">
+          <div class="grid grid-cols-2 gap-x-8 gap-y-4 mb-6">
+            <div class="flex flex-col gap-1">
+              <label class="text-xs uppercase tracking-widest text-stone-500">First Name</label>
+              <input id="first" type="text" placeholder="Hosni" name="firstname"
+                class="border border-stone-300 rounded-sm px-3 py-2 text-sm text-stone-800 bg-stone-50 focus:outline-none focus:border-amber-400 focus:bg-white transition-colors placeholder-stone-300" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="text-xs uppercase tracking-widest text-stone-500">Last Name</label>
+              <input id="last" type="text" placeholder="Ahmad" name="lastname"
+                class="border border-stone-300 rounded-sm px-3 py-2 text-sm text-stone-800 bg-stone-50 focus:outline-none focus:border-amber-400 focus:bg-white transition-colors placeholder-stone-300" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="text-xs uppercase tracking-widest text-stone-500">Email</label>
+              <input id="email" type="email" placeholder="example@example.com" name="email"
+                class="border border-stone-300 rounded-sm px-3 py-2 text-sm text-stone-800 bg-stone-50 focus:outline-none focus:border-amber-400 focus:bg-white transition-colors placeholder-stone-300" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="text-xs uppercase tracking-widest text-stone-500">Age</label>
+              <input id="age" type="number" placeholder="20" name="age"
+                class="border border-stone-300 rounded-sm px-3 py-2 text-sm text-stone-800 bg-stone-50 focus:outline-none focus:border-amber-400 focus:bg-white transition-colors placeholder-stone-300" />
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <input type="submit" value="Add" 
+              class="bg-stone-800 hover:bg-amber-500 text-white text-xs uppercase tracking-widest px-6 py-2.5 rounded-sm transition-colors duration-150 active:scale-95 transform">
+            <span id="msg" class="text-xs text-amber-600 opacity-0 transition-opacity duration-300"></span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

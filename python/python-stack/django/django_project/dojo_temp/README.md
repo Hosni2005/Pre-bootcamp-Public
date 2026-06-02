@@ -121,7 +121,7 @@ http://127.0.0.1:8000
 ### Main Page
 
 
-![Main Page](screenshots/main-page.png)
+![Main Page](screenshots/mainpage.png)
 
 
 ---

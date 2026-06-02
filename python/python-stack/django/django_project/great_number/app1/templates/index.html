@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Great Number Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>You have 5 attempts to guess it.</p>
+
+    {% if request.session.message %}
+        <div class="box {{ request.session.status }}">
+            <h2>{{ request.session.message }}</h2>
+
+            {% if request.session.status == "correct" %}
+                <p>You guessed it in {{ request.session.attempts }} attempts!</p>
+
+                <form action="/save_winner" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <button type="submit">Submit Winner</button>
+                </form>
+
+                <a href="/reset">Play Again</a>
+
+            {% elif request.session.status == "lose" %}
+                <a href="/reset">Try Again</a>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if request.session.status != "correct" and request.session.status != "lose" %}
+        <form action="/guess" method="POST">
+            {% csrf_token %}
+            <input type="number" name="guess" min="1" max="100" required>
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+
+    <p>Attempts: {{ request.session.attempts }}</p>
+
+    <a href="/leaderboard">View Leaderboard</a>
+</div>
+
+</body>
+</html>

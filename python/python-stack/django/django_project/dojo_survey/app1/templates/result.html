@@ -11,14 +11,14 @@
 
 <body>
     <main>
-        <form action="{% url 'back' %}" method="post">
-            {% csrf_token %}
         <h1>Submitted Info</h1>
-        <p>Name: {{ name }}</p>
-        <p>Location: {{ location }}</p>
-        <p>Favorite Language: {{ favourite_language }}</p>
-        <p>Comment: {{ comment }}</p>
-        <input type="submit" value="Go Back">
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <p>Name: {{ name }}</p>
+            <p>Location: {{ location }}</p>
+            <p>Favorite Language: {{ favourite_language }}</p>
+            <p>Comment: {{ comment }}</p>
+            <input type="submit" value="Go Back">
         </form>
     </main>
 

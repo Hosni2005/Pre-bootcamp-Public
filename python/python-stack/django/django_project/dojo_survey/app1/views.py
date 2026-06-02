@@ -19,5 +19,4 @@ def result(request):
         return render(request, 'result.html', context)
     else :
         return redirect('index')
-def back(request):
-    return redirect('index')
+

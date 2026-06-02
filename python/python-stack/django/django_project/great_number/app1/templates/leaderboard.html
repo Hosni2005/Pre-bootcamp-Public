@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Leaderboard</h1>
+
+    {% if winners %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Attempts</th>
+            </tr>
+
+            {% for winner in winners %}
+                <tr>
+                    <td>{{ winner.name }}</td>
+                    <td>{{ winner.attempts }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No winners yet.</p>
+    {% endif %}
+
+    <a href="/">Back to Game</a>
+</div>
+
+</body>
+</html>

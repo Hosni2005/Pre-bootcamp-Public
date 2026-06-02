@@ -1,0 +1,90 @@
+Django Shell Queries - Dojos and Ninjas
+
+Before running the shell, make sure the app is migrated:
+
+python manage.py makemigrations
+python manage.py migrate
+
+Then open the shell:
+
+python manage.py shell
+
+
+1) Import your models
+
+from registering.models import Dojo, Ninja
+
+
+2) Create 3 new dojos
+
+Dojo.objects.create(name="Coding Dojo Silicon Valley", city="San Jose", state="CA")
+Dojo.objects.create(name="Coding Dojo Seattle", city="Seattle", state="WA")
+Dojo.objects.create(name="Coding Dojo New York", city="New York", state="NY")
+
+
+3) Delete the 3 dojos you just created
+
+Dojo.objects.all().delete()
+
+
+4) Create 3 more dojos
+
+dojo1 = Dojo.objects.create(name="Coding Dojo Chicago", city="Chicago", state="IL")
+dojo2 = Dojo.objects.create(name="Coding Dojo Los Angeles", city="Los Angeles", state="CA")
+dojo3 = Dojo.objects.create(name="Coding Dojo Dallas", city="Dallas", state="TX")
+
+
+5) Create 3 ninjas that belong to the first dojo
+
+Ninja.objects.create(first_name="Ali", last_name="Ahmad", dojo=dojo1)
+Ninja.objects.create(first_name="Omar", last_name="Khaled", dojo=dojo1)
+Ninja.objects.create(first_name="Zaid", last_name="Nasser", dojo=dojo1)
+
+
+6) Create 3 ninjas that belong to the second dojo
+
+Ninja.objects.create(first_name="Lina", last_name="Hassan", dojo=dojo2)
+Ninja.objects.create(first_name="Sara", last_name="Mahmoud", dojo=dojo2)
+Ninja.objects.create(first_name="Maya", last_name="Saleh", dojo=dojo2)
+
+
+7) Create 3 ninjas that belong to the third dojo
+
+Ninja.objects.create(first_name="Adam", last_name="Yousef", dojo=dojo3)
+Ninja.objects.create(first_name="Kareem", last_name="Sami", dojo=dojo3)
+Ninja.objects.create(first_name="Noor", last_name="Taha", dojo=dojo3)
+
+
+8) Retrieve all the ninjas from the first dojo
+
+first_dojo = Dojo.objects.first()
+first_dojo.ninjas.all()
+
+
+9) Retrieve all the ninjas from the last dojo
+
+last_dojo = Dojo.objects.last()
+last_dojo.ninjas.all()
+
+
+10) Retrieve the last ninja's dojo
+
+last_ninja = Ninja.objects.last()
+last_ninja.dojo
+
+
+11) Add a new text field called desc to your Dojo class
+
+# Add this line inside the Dojo model in models.py:
+# desc = models.TextField(default="old dojo")
+
+
+12) Create and run the migration files
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+13) Create a new dojo after adding desc
+
+Dojo.objects.create(name="Coding Dojo Miami", city="Miami", state="FL", desc="New dojo")

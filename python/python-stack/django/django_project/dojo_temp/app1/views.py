@@ -19,8 +19,9 @@ def add_dojo(request) :
     
 def add_ninja(request) :
     if request.method == 'POST' :
-
-        add_ninjas(request)
+        firstname = request.POST['firstname']
+        print (firstname)
+        add_ninjas(firstname)
         return redirect('index')
     else :
         return render('index.html')

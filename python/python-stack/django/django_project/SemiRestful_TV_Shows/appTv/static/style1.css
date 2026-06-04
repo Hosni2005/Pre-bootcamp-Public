@@ -1,0 +1,150 @@
+/*
+Netflix-style theme for SemiRestful TV Shows
+Replace your current CSS files with these files inside your Django app static folder.
+*/
+
+/* allshow.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 38px 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.92)),
+        radial-gradient(circle at top left, #831010, transparent 32%),
+        #050505;
+}
+
+body::before {
+    content: "TV SHOWS";
+    position: fixed;
+    right: -40px;
+    bottom: 20px;
+    z-index: -1;
+    font-size: 150px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: rgba(255, 255, 255, 0.035);
+}
+
+h1 {
+    width: min(1100px, 100%);
+    margin: 0 auto 28px;
+    font-size: 46px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+h1::first-letter {
+    color: #e50914;
+}
+
+table {
+    width: min(1100px, 100%);
+    margin: 0 auto 30px;
+    border-collapse: separate;
+    border-spacing: 0 14px;
+}
+
+th {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #b3b3b3;
+}
+
+td {
+    padding: 18px 16px;
+    text-align: center;
+    font-size: 17px;
+    background: #161616;
+    border-top: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+td:first-child {
+    border-left: 1px solid #2b2b2b;
+    border-radius: 16px 0 0 16px;
+    color: #e50914;
+    font-weight: 900;
+}
+
+td:last-child {
+    border-right: 1px solid #2b2b2b;
+    border-radius: 0 16px 16px 0;
+}
+
+tr:hover td {
+    background: #222222;
+    transform: scale(1.01);
+}
+
+td {
+    transition: 0.22s ease;
+}
+
+td a {
+    display: inline-block;
+    margin: 4px;
+    padding: 9px 14px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    border-radius: 8px;
+    background: #333333;
+    transition: 0.2s ease;
+}
+
+td a:hover {
+    background: #e50914;
+    transform: translateY(-2px);
+}
+
+body > a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px 26px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 900;
+    color: #ffffff;
+    border-radius: 8px;
+    background: #e50914;
+    box-shadow: 0 18px 40px rgba(229, 9, 20, 0.28);
+    transition: 0.2s ease;
+}
+
+body > a:hover {
+    background: #f40612;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 760px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        border-spacing: 0 10px;
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,139 @@
+/*
+Netflix-style theme for SemiRestful TV Shows
+Replace your current CSS files with these files inside your Django app static folder.
+*/
+
+/* Tvshows.html details page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.95)),
+        radial-gradient(circle at 20% 20%, #8f0f18, transparent 34%),
+        #050505;
+}
+
+main {
+    width: min(790px, 100%);
+    padding: 38px;
+    border-radius: 18px;
+    background: rgba(12, 12, 12, 0.96);
+    border: 1px solid #2b2b2b;
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 7px;
+    background: #e50914;
+}
+
+h1 {
+    margin-bottom: 26px;
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+h3 {
+    margin: 14px 0;
+    padding: 17px 18px;
+    font-size: 20px;
+    line-height: 1.45;
+    color: #eeeeee;
+    border-radius: 10px;
+    background: #181818;
+    border: 1px solid #2c2c2c;
+}
+
+h3:hover {
+    border-color: #e50914;
+    background: #202020;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid #2d2d2d;
+}
+
+article a {
+    padding: 12px 22px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 900;
+    color: #ffffff;
+    border-radius: 8px;
+    background: #333333;
+    transition: 0.2s ease;
+}
+
+article a:first-of-type {
+    background: #ffffff;
+    color: #000000;
+}
+
+article a:nth-of-type(2) {
+    background: #e50914;
+}
+
+article a:nth-of-type(3) {
+    background: #333333;
+}
+
+article a:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: brightness(1.12);
+}
+
+span {
+    color: #777777;
+    font-weight: 900;
+}
+
+@media (max-width: 620px) {
+    main {
+        padding: 28px 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    span {
+        display: none;
+    }
+
+    article a {
+        width: 100%;
+        text-align: center;
+    }
+}

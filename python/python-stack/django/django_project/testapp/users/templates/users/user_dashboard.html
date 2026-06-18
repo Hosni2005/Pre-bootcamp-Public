@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}User Dashboard{% endblock %}
+{% block content %}
+<h3 class="mb-3">All Users</h3>
+<table class="table table-bordered table-hover bg-white">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>email</th>
+      <th>created_at</th>
+      <th>user_level</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for u in users %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td><a href="{% url 'user_info' u.id %}">{{ u.first_name }} {{ u.last_name }}</a></td>
+      <td>{{ u.email }}</td>
+      <td>{{ u.created_at|date:"M j, Y" }}</td>
+      <td>{{ u.user_level }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

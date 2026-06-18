@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<div class="card p-4 mb-4">
+  <h2>Welcome to the Test</h2>
+  <p>We're going to build a cool application using a MVC framework! This application was built with the VillageBB folks!
+  </p>
+  <a href="{% url 'register' %}" class="btn btn-primary">Start!</a>
+</div>
+
+<div class="row mt-3">
+  <div class="col-md-4">
+    <h5>Manage Users</h5>
+    <p>Using the application, you will be able to manage (add, remove, and edit) users for the application</p>
+  </div>
+  <div class="col-md-4">
+    <h5>Leave messages</h5>
+    <p>Users will be able to leave a message to another user using the application</p>
+  </div>
+  <div class="col-md-4">
+    <h5>Edit User Information</h5>
+    <p>Admins will be able to edit another user's information (email address, first name, last name, etc)</p>
+  </div>
+</div>
+{% endblock %}

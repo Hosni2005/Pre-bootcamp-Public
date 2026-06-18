@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Edit User{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between mb-3">
+  <h3>Edit user #{{ edit_target.id }}</h3>
+  <a href="{% url 'dashboard' %}" class="btn btn-success">Return to Dashboard</a>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card p-4 mb-3">
+      <h5>Edit Information</h5>
+      <div class="admin-note mb-2">only allow admin to add the information</div>
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-2"><label>Email Address:</label>{{ info_form.email }}</div>
+        <div class="mb-2"><label>First Name:</label>{{ info_form.first_name }}</div>
+        <div class="mb-2"><label>Last Name:</label>{{ info_form.last_name }}</div>
+        <div class="mb-3"><label>User Level:</label>{{ info_form.user_level }}</div>
+        <button type="submit" name="save_info" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-4">
+      <h5>Change Password</h5>
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-2"><label>Password:</label>{{ pw_form.password }}</div>
+        <div class="mb-3"><label>Password Confirmation:</label>{{ pw_form.password_confirmation }}</div>
+        <button type="submit" name="change_password" class="btn btn-warning">Update Password</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

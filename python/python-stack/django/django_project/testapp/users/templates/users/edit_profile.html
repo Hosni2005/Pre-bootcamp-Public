@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Edit Profile{% endblock %}
+{% block content %}
+<h3 class="mb-3">Edit profile</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card p-4 mb-3">
+      <h5>Edit Information</h5>
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-2"><label>Email Address:</label>{{ info_form.email }}</div>
+        <div class="mb-2"><label>First Name:</label>{{ info_form.first_name }}</div>
+        <div class="mb-2"><label>Last Name:</label>{{ info_form.last_name }}</div>
+        <button type="submit" name="save_info" class="btn btn-primary mt-2">Save</button>
+      </form>
+    </div>
+    <div class="card p-4">
+      <h5>Edit Description</h5>
+      <div class="admin-note mb-2">allow user to edit their own profile</div>
+      <form method="post">
+        {% csrf_token %}
+        {{ info_form.description }}
+        <button type="submit" name="save_info" class="btn btn-primary mt-2">Save</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-4">
+      <h5>Change Password</h5>
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-2"><label>Password:</label>{{ pw_form.password }}</div>
+        <div class="mb-3"><label>Password Confirmation:</label>{{ pw_form.password_confirmation }}</div>
+        <button type="submit" name="change_password" class="btn btn-warning">Update Password</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

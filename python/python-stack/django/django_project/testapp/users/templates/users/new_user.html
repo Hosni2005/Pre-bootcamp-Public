@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}New User{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between mb-3">
+  <h3>Add a new user</h3>
+  <a href="{% url 'dashboard' %}" class="btn btn-success">Return to Dashboard</a>
+</div>
+<div class="card p-4">
+  <div class="admin-note mb-3">only allow admin to add this user</div>
+  <form method="post">
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+    <div class="mb-2"><label>Email Address:</label>{{ form.email }}</div>
+    <div class="mb-2"><label>First Name:</label>{{ form.first_name }}</div>
+    <div class="mb-2"><label>Last Name:</label>{{ form.last_name }}</div>
+    <div class="mb-2"><label>Password:</label>{{ form.password }}</div>
+    <div class="mb-3"><label>Password Confirmation:</label>{{ form.password_confirmation }}</div>
+    <button type="submit" class="btn btn-success">Create!</button>
+  </form>
+</div>
+{% endblock %}

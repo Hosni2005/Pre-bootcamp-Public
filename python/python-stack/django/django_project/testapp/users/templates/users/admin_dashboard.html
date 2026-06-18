@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3>Manage Users</h3>
+  <a href="{% url 'new_user' %}" class="btn btn-primary">Add new</a>
+</div>
+
+<table class="table table-bordered table-hover bg-white">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>email</th>
+      <th>created_at</th>
+      <th>user_level</th>
+      <th>actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for u in users %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td><a href="{% url 'user_info' u.id %}">{{ u.first_name }} {{ u.last_name }}</a></td>
+      <td>{{ u.email }}</td>
+      <td>{{ u.created_at|date:"M j, Y" }}</td>
+      <td>{{ u.user_level }}</td>
+      <td>
+        <a href="{% url 'edit_user' u.id %}">edit</a> |
+        <a href="{% url 'delete_user' u.id %}" class="text-danger">remove</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="admin-note mt-3">
+  REMOVE: clicking on 'remove' needs to open up a confirmation box that asks the user "Are you sure?" and when the user
+  clicks on "Ok" or "Yes", remove the information from the database/site
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Confirm Delete{% endblock %}
+{% block content %}
+<div class="card p-4">
+  <h4>Are you sure?</h4>
+  <p>Are you sure you want to remove <strong>{{ edit_target.first_name }} {{ edit_target.last_name }}</strong>? This
+    cannot be undone.</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Yes, Remove</button>
+    <a href="{% url 'dashboard' %}" class="btn btn-secondary ms-2">Cancel</a>
+  </form>
+</div>
+{% endblock %}

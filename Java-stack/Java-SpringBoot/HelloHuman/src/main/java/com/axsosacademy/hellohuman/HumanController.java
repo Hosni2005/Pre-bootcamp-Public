@@ -10,9 +10,8 @@ public class HumanController {
 	public String Greeting() {
 		return "Hello Human";
 	}
-	@GetMapping("/hello")
+	@GetMapping("/")
 	public String Name(@RequestParam String name) {
 		return "Hello " + name ;
 	}
-@GetMapping("")
 }

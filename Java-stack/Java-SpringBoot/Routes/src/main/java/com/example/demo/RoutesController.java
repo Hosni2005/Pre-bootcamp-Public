@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,8 +18,21 @@ public class RoutesController {
 	public String Today() {
 		return "Today you will find luck in all your endeavors!";
 	}
-	@GetMapping ("tomorrow")
+	@GetMapping ("/tomorrow")
 	public String Tomorrow() {
 		return "Tomorrow, an opportunity will arise, so be sure to be open to new ideas!";
 	}
+	
+	@RequestMapping("/hi")
+	
+	public String hi(@RequestParam String good) {
+		return "hi" + good ;
+	}
+	@RequestMapping("/afternoon/{var}")
+	public String afternoon(@PathVariable String var) {
+		return "good " + var ;
+	}
+	
+	
+	
 }

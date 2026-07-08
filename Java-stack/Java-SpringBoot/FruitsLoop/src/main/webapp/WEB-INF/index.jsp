@@ -29,7 +29,7 @@
                 <!-- Table Body -->
                 <tbody class="divide-y divide-gray-200 border-t border-gray-200">
                     <!-- FIXED: Removed space inside the tag -->
-                    <c:forEach var="fruit" items="${fruits}">
+                    <c:forEach var="fruit" items="${nn}">
                         <tr class="hover:bg-gray-50 transition-colors duration-150">
                             <!-- FIXED: Changed fruit.getName to fruit.name -->
                             <td class="px-6 py-4 font-medium text-gray-900">

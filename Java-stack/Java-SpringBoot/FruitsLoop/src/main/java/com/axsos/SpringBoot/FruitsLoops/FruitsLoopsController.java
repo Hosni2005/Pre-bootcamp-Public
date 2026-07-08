@@ -25,4 +25,7 @@ public class FruitsLoopsController {
         model.addAttribute("fruits", fruits);
         return "index";
     }
+	
+	
+	
 }

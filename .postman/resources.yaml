@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: 59d5e229-7101-45c0-8763-ca3fb92142db
+
+localResources:
+  specs:
+    - ../python/python-stack/django/djangoPy3Env/Lib/site-packages/allauth/headless/spec/doc/openapi.yaml

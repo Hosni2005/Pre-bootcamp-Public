@@ -1,0 +1,53 @@
+@charset "UTF-8";
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+    width:450px;
+    margin:40px auto;
+    border:2px solid black;
+    padding:20px;
+    background:white;
+}
+
+.container label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.container input,
+.container textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+}
+
+button{
+    margin-top:20px;
+    background:#1f6feb;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+.fortune{
+    width:600px;
+    margin:60px auto;
+    text-align:center;
+}
+
+.message{
+    background:#66d9ff;
+    border:2px solid black;
+    padding:25px;
+    font-size:20px;
+    margin:20px 0;
+}
+
+a{
+    font-size:20px;
+}

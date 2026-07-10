@@ -1,10 +1,10 @@
-package com.axsos.carFactory;
+package com.axsosacademy.studentRoster;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CarFactoryApplicationTests {
+class StudentrosterApplicationTests {
 
 	@Test
 	void contextLoads() {

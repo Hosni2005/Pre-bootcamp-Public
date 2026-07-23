@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.axsosacademy</groupId>
-	<artifactId>exam</artifactId>
+	<artifactId>javaFinal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>exam</name>
+	<name>javaFinal</name>
 	<description/>
 	<url/>
 	<licenses>
@@ -80,8 +80,8 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.axsos</groupId>
-			<artifactId>loginRegister</artifactId>
+			<groupId>com.axsosacademy</groupId>
+			<artifactId>javaExam</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

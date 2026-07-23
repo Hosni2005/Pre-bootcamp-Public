@@ -1,7 +1,5 @@
-package com.axsosacademy.exam.services;
+package com.axsosacademy.services;
 
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.Optional;
 
 import org.mindrot.jbcrypt.BCrypt;
@@ -9,44 +7,33 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
-import com.axsosacademy.exam.models.User;
-import com.axsosacademy.exam.models.LoginUser;
-import com.axsosacademy.exam.repositores.UserRepository;
+import com.axsosacademy.models.LoginUser;
+import com.axsosacademy.models.User;
+import com.axsosacademy.repositories.UserRepository;
+
 
 
 
 @Service
 public class UserService {
-
-    // @Autowired lets Spring inject the repository for us,
-    // so we can omit writing the constructor.
-    @Autowired
+	@Autowired
     private UserRepository userRepo;
 
     // This method will be called from the controller
     // whenever a user submits a registration form.
     public User register(User newUser, BindingResult result) {
 
-
         // Reject if email is taken (present in database):
         // query the database for a user with this email.
         Optional<User> potentialUser = userRepo.findByEmail(newUser.getEmail());
 
-//        if (newUser.getBirthDay() != null){
-//            int age = Period.between(newUser.getBirthDay(), LocalDate.now()).getYears();
-//            if(age <10){
-//                result.rejectValue("birthday","MinAge",  "You must be at least 10 years old to register!");
-//
-//            }
-//     }
         if (potentialUser.isPresent()) {
-
             // Add a custom error to the BindingResult with rejectValue
             result.rejectValue("email", "Unique", "This email is already registered!");
         }
 
         // Reject if password doesn't match confirmation
-        if (!newUser.getPassword().equals(newUser.getConfirm())) {
+        if (newUser.getPassword() != null && !newUser.getPassword().equals(newUser.getConfirm())) {
             result.rejectValue("confirm", "Matches", "The Confirm Password must match Password!");
         }
 
@@ -97,7 +84,7 @@ public class UserService {
     }
 
     // Finds one user by their id (used to greet the logged-in
-    // user on the success page using the id saved in session)
+    // user on the dashboard page using the id saved in session)
     public User findUserById(Long id) {
         Optional<User> potentialUser = userRepo.findById(id);
         if (potentialUser.isPresent()) {

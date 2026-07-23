@@ -20,7 +20,7 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "blogs")
-public class Blogs {
+public class Blog {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -60,7 +60,7 @@ public class Blogs {
 		this.comments = comments;
 	}
 
-	public Blogs(List<Comment> comments) {
+	public Blog(List<Comment> comments) {
 		super();
 		this.comments = comments;
 	}

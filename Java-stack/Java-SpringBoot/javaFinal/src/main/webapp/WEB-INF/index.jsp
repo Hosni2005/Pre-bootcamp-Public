@@ -147,7 +147,11 @@
         <div class="eyebrow">New member</div>
         <h2>Register</h2>
 
-        <form:form action="/register" method="post" modelAttribute="newUser">
+        <form:form 
+            action="${pageContext.request.contextPath}/register" 
+            method="post" 
+            modelAttribute="newUser">
+
             <form:label path="firstName">First name</form:label>
             <form:input path="firstName" placeholder="e.g. Jonathan" />
             <form:errors path="firstName" cssClass="error" />
@@ -169,15 +173,22 @@
             <form:errors path="confirm" cssClass="error" />
 
             <input type="submit" value="Submit" />
+
         </form:form>
     </div>
+
+
 
     <%-- Login card --%>
     <div class="card green">
         <div class="eyebrow">Returning member</div>
         <h2>Log in</h2>
 
-        <form:form action="/login" method="post" modelAttribute="newLogin">
+        <form:form 
+            action="${pageContext.request.contextPath}/login" 
+            method="post" 
+            modelAttribute="newLogin">
+
             <form:label path="email">Email</form:label>
             <form:input path="email" placeholder="e.g. jane@email.com" />
             <form:errors path="email" cssClass="error" />
@@ -187,8 +198,12 @@
             <form:errors path="password" cssClass="error" />
 
             <input type="submit" value="Submit" />
+
         </form:form>
+
     </div>
+
 </div>
+
 </body>
 </html>

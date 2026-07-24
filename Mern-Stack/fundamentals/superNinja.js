@@ -1,11 +1,17 @@
+import { Ninja } from "./Ninja.js";
+
 class Sensei extends Ninja {
-    constructor () {
-        super()
+    constructor (name) {
+        super(name);
+        this.health = 200;
+        this.speed = 10;
+        this.strength = 10
         this.wisdom = 10;
     }
 
     speakWisdom(){
-        console.log(this.drinkSake())
+        super.drinkSake();
+        console.log("What one programmer can do in one month")
     }
 }
 

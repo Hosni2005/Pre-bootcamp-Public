@@ -1,9 +1,8 @@
 import { Ninja } from "./Ninja.js";
 
 class Sensei extends Ninja {
-    constructor (name) {
-        super(name);
-        this.health = 200;
+    constructor (name , health) {
+        super(name , 200);
         this.speed = 10;
         this.strength = 10
         this.wisdom = 10;

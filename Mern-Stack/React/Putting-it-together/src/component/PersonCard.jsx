@@ -1,22 +1,27 @@
 import { useState } from "react";
-
+import styles from "./PersonCard.module.css"
 const PersonCard = (props) => {
-  const [age, setAge] = useState(props.age);
+  const { firstName, lastName, age: propAge, hairColor } = props;
+
+  const [age, setAge] = useState(propAge);
   const increaseAge = () => {
     setAge(age+1);
   };
   return (
-    <div>
+
+    <div className={styles.btn}>
       <h2>
-        {props.firstName} {props.lastName}{" "}
+        {firstName} {lastName}{" "}
       </h2>
       <p>Age : {age}</p>
-      <p>Hair Color: {props.hairColor}</p>
+      <p>Hair Color: {hairColor}</p>
 
       <button onClick={increaseAge}>
-        Birthday Button for {props.firstName} {props.lastName}
+        Birthday Button for {firstName} {lastName}
       </button>
     </div>
+
+  
   );
 };
 export default PersonCard;

@@ -1,10 +1,13 @@
-const PersonCard = (props) => {
-    return(
-            <div>
-                <h1 style={{color:"red"}}>Instructor Bob</h1>
-                <p>Age: 32</p>
-                <p>Hair Color: purple</p>
-            </div>
-        );
-}
+const PersonCard = ({firstName, lastName, age, hairColor}) => {
+  return (
+    <div>
+      <h2>
+        {firstName} {lastName}
+      </h2>
+      <p>Age: {age}</p>
+      <p>Hair Color: {hairColor}</p>
+      <hr />
+    </div>
+  );
+};
 export default PersonCard;

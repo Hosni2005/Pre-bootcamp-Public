@@ -1,25 +1,54 @@
 class Node {
-    constructor(val) {
-        this.val = val;
-        this.left = null;
-        this.right = null;
+    constructor(data) {
+        this.data = data
+        this.next = null
     }
 }
 
-class BST {
-    insert(root , newNode){
-        if (root.val > newNode.val){
-            if (root.left === null){
-                root.left = newNode ;
-            }else{
-                this.insert(root.left , newNode);
-            }
-        }else{
-            if (root.right === null){
-                root.right = newNode ;
-            }else{
-                this.insert(root.right , newNode);
-            }
+export default class Queue {
+    constructor() {
+        this.head = null
+        this.tail = null
+    }
+
+    isEmpty() {
+        return this.head == null
+    }
+
+    getPeek() {
+        return this.head.data;
+    }
+
+    enqueue(newnode) {
+        //let newnode = new Node(value)
+        if (this.tail != null) {
+            this.tail.next = newnode
         }
+        this.tail = newnode
+
+        if (this.head == null) {
+            this.head = newnode
+        }
+    }
+
+    dequeue() {
+        let node = this.head
+        this.head = this.head.next
+
+        if (this.head == null) {
+            this.tail = null
+        }
+        return node;
+    }
+
+    printQueue() {
+        let current = this.head
+        var result = ""
+        while (current != null) {
+            result += current.data + "->"
+            //console.log(current.data + "->")
+            current = current.next
+        }
+        console.log(result);
     }
 }

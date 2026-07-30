@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import FormData from "./FormData";
 
 const Form = () => {
   const [firstName, setfirstName] = useState("");
@@ -17,13 +17,15 @@ const Form = () => {
   const [confirmPassword, setconfirmPassword] = useState("");
   const [confirmPasswordErorr, setconfirmPasswordErorr] = useState("");
 
+  const [showData, setShowData] = useState(false);
+
+
   return (
     <form>
       <div>
-        <label htmlFor="firstName">firstName</label>
+        <label htmlFor="firstName">First Name</label>
         <input
           type="text"
-          name="firstName"
           id="firstName"
           value={firstName}
           onChange={(e) => {
@@ -40,11 +42,11 @@ const Form = () => {
         <p>{firstNameErorr}</p>
       </div>
 
+
       <div>
-        <label htmlFor="lastName">lastName</label>
+        <label htmlFor="lastName">Last Name</label>
         <input
           type="text"
-          name="lastName"
           id="lastName"
           value={lastName}
           onChange={(e) => {
@@ -57,14 +59,15 @@ const Form = () => {
             }
           }}
         />
+
         <p>{lastNameErorr}</p>
       </div>
+
 
       <div>
         <label htmlFor="Email">Email</label>
         <input
           type="email"
-          name="Email"
           id="Email"
           value={Email}
           onChange={(e) => {
@@ -77,14 +80,15 @@ const Form = () => {
             }
           }}
         />
+
         <p>{EmailErorr}</p>
       </div>
+
 
       <div>
         <label htmlFor="Password">Password</label>
         <input
           type="password"
-          name="Password"
           id="Password"
           value={Password}
           onChange={(e) => {
@@ -97,15 +101,16 @@ const Form = () => {
             }
           }}
         />
+
         <p>{PasswordErorr}</p>
       </div>
 
+
       <div>
-        <label htmlFor="confirmPassword">confirmPassword</label>
+        <label htmlFor="confirmPassword">Confirm Password</label>
 
         <input
           type="password"
-          name="confirmPassword"
           id="confirmPassword"
           value={confirmPassword}
           onChange={(e) => {
@@ -118,18 +123,29 @@ const Form = () => {
             }
           }}
         />
+
         <p>{confirmPasswordErorr}</p>
       </div>
 
-      <hr />
 
-      <h2>Your Form Data</h2>
+      <button
+        type="button"
+        onClick={() => setShowData(!showData)}
+      >
+        {showData ? "Hide Data" : "Show Data"}
+      </button>
 
-      <p>First Name: {firstName}</p>
-      <p>Last Name: {lastName}</p>
-      <p>Email: {Email}</p>
-      <p>Password: {Password}</p>
-      <p>Confirm Password: {confirmPassword}</p>
+
+      {showData && (
+        <FormData
+          firstName={firstName}
+          lastName={lastName}
+          Email={Email}
+          Password={Password}
+          confirmPassword={confirmPassword}
+        />
+      )}
+
     </form>
   );
 };

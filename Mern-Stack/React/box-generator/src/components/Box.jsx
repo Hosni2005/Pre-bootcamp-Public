@@ -1,5 +1,4 @@
 
-
 const Box = ({boxes}) => {
 
 
@@ -14,6 +13,7 @@ return(
       backgroundColor : box.color,
       width : `${box.size}px`,
       height : `${box.size}px`,
+
     }}
     >
     </div>
